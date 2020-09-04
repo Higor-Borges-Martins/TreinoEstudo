@@ -16,7 +16,12 @@ public class TreinoEstudo {
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Hello Word");
+        //imprimir idade
+        int idade = 15;
+        System.out.println(idade);
+        //imprimir dade ano que vem
+        int idadeAnoQueVem = idade + 1;
+        System.out.println(idadeAnoQueVem);
     }
     
 }
