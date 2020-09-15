@@ -10,10 +10,21 @@ package P33;
  * @author GEMEOS
  */
 public class Questao4 {
-    public static void main(String[] args ){
-        int fatorial;
-        for(int n =1; n<=10; n++){
-        
-    }
+
+    
+        static long fibo(int n){
+          if( n < 2 ){  
+              return n;
+        }else {
+              return fibo(n -1) + fibo(n -2);
+          }
+    
+}
+    
+    public static void main(String[] args) {
+      
+        for(int i = 0; i<30; i++){
+            System.out.println("(" + i + "):" + Questao4.fibo(i) + "\t");
+        }
     }
 }
