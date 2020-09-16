@@ -11,20 +11,18 @@ package P33;
  */
 public class Questao4 {
 
-    
-        static long fibo(int n){
-          if( n < 2 ){  
-              return n;
-        }else {
-              return fibo(n -1) + fibo(n -2);
-          }
-    
-}
-    
     public static void main(String[] args) {
-      
-        for(int i = 0; i<30; i++){
-            System.out.println("(" + i + "):" + Questao4.fibo(i) + "\t");
+
+        int fat1 = 0;
+        int fat2 = 1;
+        int resp;
+
+        while (fat1 < 100) {
+            while (fat2 ) {
+                System.out.println(fat1);
+                fat1 = fat1 + fat2;
+            }
+                fat2 = fat1;
         }
     }
 }
