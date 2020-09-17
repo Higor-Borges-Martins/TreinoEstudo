@@ -32,13 +32,17 @@ public class TreinoEstudo {
         //        }
         //        for(int i = 1; i< 10; i++){
         //            System.err.println(i);
-        int x = 100;
-       long y = x;
-       
-        System.out.println(y);
-       y -=x;
-        System.out.println(y);
-      
-            }
+//        int x = 100;
+//       long y = x;
+//       
+//        System.out.println(y);
+//       y -=x;
+//        System.out.println(y);
+        Conta minhaConta;
+        minhaConta = new Conta();
+        minhaConta.titular = "Duki";
+        minhaConta.saldo = 1000.00;
+        System.out.println("Saldo atual " + minhaConta.saldo);
+    }
 
 }
