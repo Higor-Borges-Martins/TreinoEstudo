@@ -10,8 +10,22 @@ package treinoestudo;
  * @author GEMEOS
  */
 public class Conta {
-    
+
     int numero;
     String titular;
     double saldo;
+
+    boolean saca(double quantidade) {
+        if (this.saldo < quantidade) {
+            return false;
+        } else {
+            this.saldo -= quantidade;
+            return true;
+        }
+    }
+
+    void depositar(double quantidade) {
+
+        this.saldo += quantidade;
+    }
 }

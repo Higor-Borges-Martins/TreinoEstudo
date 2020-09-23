@@ -43,6 +43,22 @@ public class TreinoEstudo {
         minhaConta.titular = "Duki";
         minhaConta.saldo = 1000.00;
         System.out.println("Saldo atual " + minhaConta.saldo);
+        
+        Conta meuSonho = new Conta();
+        meuSonho.saldo = 150000;
+        System.out.println("Meu sonho " + meuSonho.saldo);
+        
+      boolean conseguir =  minhaConta.saca(200);
+        if(conseguir){
+            System.out.println("Conseguil sacar");
+        }else{
+            
+            System.out.println("não conseguil sacar");
+        }
+        System.out.println(minhaConta.saldo);
+        
+        minhaConta.depositar(500);
+        System.out.println(minhaConta.saldo);
     }
 
 }
