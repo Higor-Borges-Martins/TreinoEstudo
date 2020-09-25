@@ -38,27 +38,49 @@ public class TreinoEstudo {
 //        System.out.println(y);
 //       y -=x;
 //        System.out.println(y);
-        Conta minhaConta;
-        minhaConta = new Conta();
-        minhaConta.titular = "Duki";
-        minhaConta.saldo = 1000.00;
-        System.out.println("Saldo atual " + minhaConta.saldo);
-        
-        Conta meuSonho = new Conta();
-        meuSonho.saldo = 150000;
-        System.out.println("Meu sonho " + meuSonho.saldo);
-        
-      boolean conseguir =  minhaConta.saca(200);
-        if(conseguir){
-            System.out.println("Conseguil sacar");
+//        Conta minhaConta;
+//        minhaConta = new Conta();
+//        minhaConta.titular = "Duki";
+//        minhaConta.saldo = 1000.00;
+//        System.out.println("Saldo atual " + minhaConta.saldo);
+//        
+//        Conta meuSonho = new Conta();
+//        meuSonho.saldo = 150000;
+//        System.out.println("Meu sonho " + meuSonho.saldo);
+//        
+//      boolean conseguir =  minhaConta.saca(200);
+//        if(conseguir){
+//            System.out.println("Conseguil sacar");
+//        }else{
+//            
+//            System.out.println("não conseguil sacar");
+//        }
+//        System.out.println(minhaConta.saldo);
+//        
+//        minhaConta.depositar(500);
+//        System.out.println(minhaConta.saldo);
+        Conta c1 = new Conta();
+        Conta c2 = new Conta();
+
+//        c1.depositar(100);
+//        c2.saldo = c1.saldo;
+//        c2.depositar(200);
+//        System.out.println(c1.saldo);
+//        System.out.println(c2.saldo);
+        c1.saldo = 10;
+        c1.titular = "Duki";
+        c2.saldo = 10;
+        c2.titular = "Duki";
+        if(c1 == c2){
+            System.out.println("são iguais");
         }else{
-            
-            System.out.println("não conseguil sacar");
+            System.out.println("Não");
         }
-        System.out.println(minhaConta.saldo);
         
-        minhaConta.depositar(500);
-        System.out.println(minhaConta.saldo);
+       if( c1.transferePara(c2, 5)){
+           System.out.println(c1.saldo);
+           System.out.println(c2.saldo);
+       }
     }
 
 }

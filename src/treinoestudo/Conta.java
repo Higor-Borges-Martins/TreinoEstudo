@@ -28,4 +28,15 @@ public class Conta {
 
         this.saldo += quantidade;
     }
+    
+    boolean transferePara(Conta destino, double valor){
+        
+        boolean retirada = this.saca(valor);
+        if(retirada == false){
+            return false;
+        }else{
+            destino.depositar(valor);
+            return true;
+        }
+    }
 }
