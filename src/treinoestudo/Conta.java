@@ -12,7 +12,7 @@ package treinoestudo;
 public class Conta {
 
     int numero;
-    String titular;
+    Cliente titular;
     double saldo;
 
     boolean saca(double quantidade) {

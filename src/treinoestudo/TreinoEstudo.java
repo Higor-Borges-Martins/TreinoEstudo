@@ -59,28 +59,30 @@ public class TreinoEstudo {
 //        
 //        minhaConta.depositar(500);
 //        System.out.println(minhaConta.saldo);
-        Conta c1 = new Conta();
-        Conta c2 = new Conta();
+        Conta minhaConta = new Conta();
+        Cliente c = new Cliente();
+        minhaConta.titular = c;
+        minhaConta.titular.nome = "Duke";
 
 //        c1.depositar(100);
 //        c2.saldo = c1.saldo;
 //        c2.depositar(200);
 //        System.out.println(c1.saldo);
 //        System.out.println(c2.saldo);
-        c1.saldo = 10;
-        c1.titular = "Duki";
-        c2.saldo = 10;
-        c2.titular = "Duki";
-        if(c1 == c2){
-            System.out.println("são iguais");
-        }else{
-            System.out.println("Não");
-        }
-        
-       if( c1.transferePara(c2, 5)){
-           System.out.println(c1.saldo);
-           System.out.println(c2.saldo);
-       }
+//        c1.saldo = 10;
+//        c1.titular = "Duki";
+//        c2.saldo = 10;
+//        c2.titular = "Duki";
+//        if(c1 == c2){
+//            System.out.println("são iguais");
+//        }else{
+//            System.out.println("Não");
+//        }
+//        
+//       if( c1.transferePara(c2, 5)){
+//           System.out.println(c1.saldo);
+//           System.out.println(c2.saldo);
+//       }
     }
 
 }
