@@ -11,16 +11,17 @@ package treinoestudo;
  */
 public class Conta {
 
-    int numero;
-    Cliente titular;
+    int numeroDaConta;
+    String titular;
+    String agencia;
     double saldo;
+    String dataAbertura;
 
-    boolean saca(double quantidade) {
+    void sacar(double quantidade) {
         if (this.saldo < quantidade) {
-            return false;
         } else {
             this.saldo -= quantidade;
-            return true;
+            System.out.println(this.saldo);
         }
     }
 
@@ -28,15 +29,15 @@ public class Conta {
 
         this.saldo += quantidade;
     }
-    
-    boolean transferePara(Conta destino, double valor){
-        
-        boolean retirada = this.saca(valor);
-        if(retirada == false){
-            return false;
-        }else{
-            destino.depositar(valor);
-            return true;
-        }
+
+    void transferePara(Conta destino, double valor) {
+
+        this.sacar(valor);
+        destino.depositar(valor);
+
+    }
+
+    double calcularRendimento() {
+        return this.saldo * 0.1;
     }
 }

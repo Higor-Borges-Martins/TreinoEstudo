@@ -59,10 +59,10 @@ public class TreinoEstudo {
 //        
 //        minhaConta.depositar(500);
 //        System.out.println(minhaConta.saldo);
-        Conta minhaConta = new Conta();
-        Cliente c = new Cliente();
-        minhaConta.titular = c;
-        minhaConta.titular.nome = "Duke";
+//        Conta minhaConta = new Conta();
+//        Cliente c = new Cliente();
+//        minhaConta.titular = c;
+//        minhaConta.titular.nome = "Duke";
 
 //        c1.depositar(100);
 //        c2.saldo = c1.saldo;
@@ -83,6 +83,24 @@ public class TreinoEstudo {
 //           System.out.println(c1.saldo);
 //           System.out.println(c2.saldo);
 //       }
+Conta minhaConta = new Conta();
+Conta outraConta = new Conta();
+minhaConta.titular = "Hugo";
+minhaConta.agencia = "45678-9";
+minhaConta.saldo = 50.0;
+minhaConta.dataAbertura = "04/05/1997";
+
+minhaConta.depositar(30);
+System.out.println("saldo atual " + minhaConta.saldo);
+System.out.println(minhaConta.calcularRendimento());
+System.out.println(minhaConta.titular);
+System.out.println(minhaConta.numeroDaConta);
+System.out.println(minhaConta.dataAbertura);
+
+minhaConta.transferePara(outraConta, 15);
+System.out.println(minhaConta.saldo);
+System.out.println(outraConta.saldo);
+
     }
 
 }

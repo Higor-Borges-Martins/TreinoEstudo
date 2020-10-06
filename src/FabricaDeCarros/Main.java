@@ -16,6 +16,18 @@ public class Main {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Carro meuCarro;
+        meuCarro = new Carro();
+        
+        meuCarro.cor = "Azul";
+        meuCarro.modelo = "funsca";
+        meuCarro.velocidadeAtual = 0;
+        meuCarro.velocidadeMaxima = 80;
+        
+        meuCarro.liga();
+        
+        meuCarro.acelerando(20);
+        System.out.println(meuCarro.velocidadeAtual);
     }
     
 }
