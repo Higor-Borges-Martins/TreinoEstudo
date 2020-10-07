@@ -85,22 +85,43 @@ public class TreinoEstudo {
 //       }
 Conta minhaConta = new Conta();
 Conta outraConta = new Conta();
+Data data = new Data();
+
+
 minhaConta.titular = "Hugo";
 minhaConta.agencia = "45678-9";
 minhaConta.saldo = 50.0;
-minhaConta.dataAbertura = "04/05/1997";
+
+data.dia = 04;
+data.mes = 05;
+data.ano = 1997;
+minhaConta.dataAbertura = data;
 
 minhaConta.depositar(30);
-System.out.println("saldo atual " + minhaConta.saldo);
-System.out.println(minhaConta.calcularRendimento());
-System.out.println(minhaConta.titular);
-System.out.println(minhaConta.numeroDaConta);
-System.out.println(minhaConta.dataAbertura);
 
 minhaConta.transferePara(outraConta, 15);
-System.out.println(minhaConta.saldo);
-System.out.println(outraConta.saldo);
+System.out.println(minhaConta.RecuperarDados());
 
+outraConta.titular = "João";
+outraConta.agencia = "98765-4";
+outraConta.numeroDaConta = 1;
+data.dia = 11;
+data.mes = 11;
+data.ano = 11;
+outraConta.dataAbertura = data;
+outraConta.depositar(5.0);
+        System.out.println("\n");
+        System.out.println(outraConta.RecuperarDados());
+        
+       outraConta = minhaConta;
+      
+        
+        if(minhaConta == outraConta){
+            System.out.println("São iguais");
+        }else{
+            System.out.println("Não iguais");
+        }
+System.out.println(outraConta.RecuperarDados());
     }
 
 }

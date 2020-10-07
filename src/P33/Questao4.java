@@ -18,10 +18,11 @@ public class Questao4 {
         int resp;
 
         while (fat1 < 100) {
-         
-                System.out.println(fat1 = fat1 + fat2);
-                fat2 = fat1 - fat2;
+
+            System.out.println(fat1 = fat1 + fat2);
+            fat2 = fat1 - fat2;
 
         }
+
     }
 }

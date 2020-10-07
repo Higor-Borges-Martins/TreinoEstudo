@@ -15,7 +15,7 @@ public class Conta {
     String titular;
     String agencia;
     double saldo;
-    String dataAbertura;
+    Data dataAbertura;
 
     void sacar(double quantidade) {
         if (this.saldo < quantidade) {
@@ -39,5 +39,12 @@ public class Conta {
 
     double calcularRendimento() {
         return this.saldo * 0.1;
+    }
+
+    String RecuperarDados() {
+        String dados = "Numero da conta " + this.numeroDaConta + "\n Titular " + this.titular + "\n Agencia " + this.agencia + "\n Saldo " + this.saldo
+                + "\n Data de Abertura " + this.dataAbertura.formadata() + "\n Rendimento da Conta " + this.calcularRendimento();
+        return dados;
+
     }
 }
