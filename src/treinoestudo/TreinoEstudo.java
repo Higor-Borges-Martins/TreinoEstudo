@@ -38,12 +38,17 @@ public class TreinoEstudo {
 //        System.out.println(y);
 //       y -=x;
 //        System.out.println(y);
-//        Conta minhaConta;
-//        minhaConta = new Conta();
-//        minhaConta.titular = "Duki";
-//        minhaConta.saldo = 1000.00;
+        Conta minhaConta;
+        minhaConta = new Conta();
+//        minhaConta.depositar(100);
+//        
+////        minhaConta.titular = "Duki";
+////        minhaConta.saldo = 1000.00;
 //        System.out.println("Saldo atual " + minhaConta.saldo);
 //        
+//        minhaConta.sacar(50000);
+//        System.out.println(minhaConta.saldo);
+        
 //        Conta meuSonho = new Conta();
 //        meuSonho.saldo = 150000;
 //        System.out.println("Meu sonho " + meuSonho.saldo);
@@ -60,10 +65,9 @@ public class TreinoEstudo {
 //        minhaConta.depositar(500);
 //        System.out.println(minhaConta.saldo);
 //        Conta minhaConta = new Conta();
-//        Cliente c = new Cliente();
-//        minhaConta.titular = c;
+        Cliente c = new Cliente();
+        minhaConta.titular = c;
 //        minhaConta.titular.nome = "Duke";
-
 //        c1.depositar(100);
 //        c2.saldo = c1.saldo;
 //        c2.depositar(200);
@@ -83,45 +87,88 @@ public class TreinoEstudo {
 //           System.out.println(c1.saldo);
 //           System.out.println(c2.saldo);
 //       }
-Conta minhaConta = new Conta();
-Conta outraConta = new Conta();
-Data data = new Data();
+//Conta minhaConta = new Conta();
+//Conta outraConta = new Conta();
+//Data data = new Data();
+//
+//
+//minhaConta.titular = "Hugo";
+//minhaConta.agencia = "45678-9";
+//minhaConta.saldo = 50.0;
+//
+//data.dia = 04;
+//data.mes = 05;
+//data.ano = 1997;
+//minhaConta.dataAbertura = data;
+//
+//minhaConta.depositar(30);
+//
+//minhaConta.transferePara(outraConta, 15);
+//System.out.println(minhaConta.RecuperarDados());
+//
+//outraConta.titular = "João";
+//outraConta.agencia = "98765-4";
+//outraConta.numeroDaConta = 1;
+//data.dia = 11;
+//data.mes = 11;
+//data.ano = 11;
+//outraConta.dataAbertura = data;
+//outraConta.depositar(5.0);
+//        System.out.println("\n");
+//        System.out.println(outraConta.RecuperarDados());
+//        
+//       outraConta = minhaConta;
+//      
+//        
+//        if(minhaConta == outraConta){
+//            System.out.println("São iguais");
+//        }else{
+//            System.out.println("Não iguais");
+//        }
+//System.out.println(outraConta.RecuperarDados());
+//Pessoa p = new Pessoa();
+//
+//p.nome = "Hugo";
+//p.idade = 5;
+//p.fazAniversario();
+//System.out.println(p.nome + p.idade);
+//p.fazAniversario();
+//System.out.println(p.nome + p.idade);
+        Porta p = new Porta();
 
-
-minhaConta.titular = "Hugo";
-minhaConta.agencia = "45678-9";
-minhaConta.saldo = 50.0;
-
-data.dia = 04;
-data.mes = 05;
-data.ano = 1997;
-minhaConta.dataAbertura = data;
-
-minhaConta.depositar(30);
-
-minhaConta.transferePara(outraConta, 15);
-System.out.println(minhaConta.RecuperarDados());
-
-outraConta.titular = "João";
-outraConta.agencia = "98765-4";
-outraConta.numeroDaConta = 1;
-data.dia = 11;
-data.mes = 11;
-data.ano = 11;
-outraConta.dataAbertura = data;
-outraConta.depositar(5.0);
-        System.out.println("\n");
-        System.out.println(outraConta.RecuperarDados());
+        p.abre();
+        p.pinta("azul");
+        p.divencaox = 1;
+        p.divencaoy = 2;
+        p.divencaoz = 3;
         
-       outraConta = minhaConta;
-      
-        
-        if(minhaConta == outraConta){
-            System.out.println("São iguais");
+        if(p.estaAberta()){
+            
+            System.out.println("aberta");
         }else{
-            System.out.println("Não iguais");
+            System.out.println("fechada");
         }
-System.out.println(outraConta.RecuperarDados());
+        
+        System.out.println(p.toString());
+        
+        p.pinta("Verde");
+        p.fecha();
+        if(p.estaAberta()){
+            System.out.println("aberta");
+        }else{
+            System.out.println("fechada");
+        }
+        System.out.println(p.toString());
+        
+//        Casa c;
+//        c= new Casa();
+//        p.abre();
+//        c.porta1 = p;
+//        c.porta2 = p;
+//         p.fecha();
+//        c.porta3 = p;
+//        c.pinta("azul-marino");
+//        
+//        System.out.println(c.cor + "Portas abertas" + c.quantasPortasAberas());
     }
-
 }

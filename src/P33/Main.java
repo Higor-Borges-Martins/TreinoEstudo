@@ -18,7 +18,7 @@ public class Main {
         
         Fibonacci fibonacci = new Fibonacci();
         
-        for(int i = 1; i >= 6; i++){
+        for(int i = 1; i <= 6; i++){ 
             int resultado = fibonacci.calculadoFibonacci(i);
             System.out.println(resultado);
         }

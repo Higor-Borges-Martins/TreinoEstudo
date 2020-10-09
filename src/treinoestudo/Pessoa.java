@@ -9,9 +9,13 @@ package treinoestudo;
  *
  * @author GEMEOS
  */
-public class Cliente {
+public class Pessoa {
     
-   private String nome;
-    private String sobreNome;
-    private String cpf;
+    String nome;
+    int idade;
+    
+    void fazAniversario(){
+        
+        this.idade += 1;
+    }
 }

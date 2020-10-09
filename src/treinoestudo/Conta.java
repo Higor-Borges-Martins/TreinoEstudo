@@ -12,13 +12,15 @@ package treinoestudo;
 public class Conta {
 
     int numeroDaConta;
-    String titular;
+    Cliente titular;
     String agencia;
     double saldo;
     Data dataAbertura;
 
-    void sacar(double quantidade) {
+   public void sacar(double quantidade) {
         if (this.saldo < quantidade) {
+            
+            System.out.println("Quantidade exerdi o saldo");
         } else {
             this.saldo -= quantidade;
             System.out.println(this.saldo);
