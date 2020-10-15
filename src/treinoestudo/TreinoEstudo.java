@@ -5,6 +5,8 @@
  */
 package treinoestudo;
 
+import java.text.ParseException;
+
 /**
  *
  * @author GEMEOS
@@ -14,7 +16,7 @@ public class TreinoEstudo {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws ParseException {
         // TODO code application logic here
         //imprimir idade
         //        int idade = 15;
@@ -48,7 +50,7 @@ public class TreinoEstudo {
 //        
 //        minhaConta.sacar(50000);
 //        System.out.println(minhaConta.saldo);
-        
+
 //        Conta meuSonho = new Conta();
 //        meuSonho.saldo = 150000;
 //        System.out.println("Meu sonho " + meuSonho.saldo);
@@ -65,18 +67,23 @@ public class TreinoEstudo {
 //        minhaConta.depositar(500);
 //        System.out.println(minhaConta.saldo);
 //        Conta minhaConta = new Conta();
-        Cliente c = new Cliente();
-        minhaConta.titular = c;
+        Cliente c1 = new Cliente();
 //        minhaConta.titular.nome = "Duke";
 //        c1.depositar(100);
 //        c2.saldo = c1.saldo;
 //        c2.depositar(200);
 //        System.out.println(c1.saldo);
 //        System.out.println(c2.saldo);
-//        c1.saldo = 10;
-//        c1.titular = "Duki";
+        c1.idade = 10;
+        c1.nome = "Duki";
+        c1.sobreNome = "B";
+        c1.validarCpf("123.456.-78");
 //        c2.saldo = 10;
 //        c2.titular = "Duki";
+        System.out.println(c1.toString());
+        minhaConta.setTitular(c1);
+        c1.mudarCpf("123.456.90");
+        System.out.println(c1.toString());
 //        if(c1 == c2){
 //            System.out.println("são iguais");
 //        }else{
@@ -93,8 +100,12 @@ public class TreinoEstudo {
 //
 //
 //minhaConta.titular = "Hugo";
-//minhaConta.agencia = "45678-9";
-//minhaConta.saldo = 50.0;
+minhaConta.setAgencia("45678-9");
+minhaConta.depositar(-50.0);
+minhaConta.depositar(30.0);
+minhaConta.abertura("01/02/200");
+minhaConta.RecuperarDados();
+        System.out.println(minhaConta.RecuperarDados());
 //
 //data.dia = 04;
 //data.mes = 05;
@@ -141,25 +152,25 @@ public class TreinoEstudo {
         p.divencaox = 1;
         p.divencaoy = 2;
         p.divencaoz = 3;
-        
-        if(p.estaAberta()){
-            
+
+        if (p.estaAberta()) {
+
             System.out.println("aberta");
-        }else{
+        } else {
             System.out.println("fechada");
         }
-        
+
         System.out.println(p.toString());
-        
+
         p.pinta("Verde");
         p.fecha();
-        if(p.estaAberta()){
+        if (p.estaAberta()) {
             System.out.println("aberta");
-        }else{
+        } else {
             System.out.println("fechada");
         }
         System.out.println(p.toString());
-        
+
 //        Casa c;
 //        c= new Casa();
 //        p.abre();
