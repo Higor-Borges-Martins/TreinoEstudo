@@ -7,6 +7,8 @@ package treinoestudo;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.DateTimeException;
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -22,39 +24,56 @@ public class Conta {
     double limite;
     private Date dataAbertura;
 
+    private static int indentificador;
+
     SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
 
-    
-    Conta() {
+    Conta(Cliente titular) {
+
+        this.titular = titular;
+        Conta.indentificador++;
     }
+
+    Conta(int numero, Cliente titular) {
+        this(titular);
+        this.numeroDaConta = numero;
+    }
+
     public int getNumeroDaConta() {
-        return numeroDaConta;
+        return this.numeroDaConta;
+
     }
 
-    public void setNumeroDaConta(int numeroDaConta) {
-        this.numeroDaConta = numeroDaConta;
+    public void setNumeroDaConta(int numero) {
+        this.numeroDaConta = numero;
     }
 
-    public Cliente getTitular() {
-        return titular;
+    public double getSaldo() {
+
+        return this.saldo;
+    }
+
+    public Cliente getTtitular() {
+        return this.titular;
     }
 
     public void setTitular(Cliente titular) {
         this.titular = titular;
     }
 
-    public double getSaldo() {
-        return this.saldo + this.limite;
-    }
-
     public String getAgencia() {
-        return agencia;
+        return this.agencia;
     }
-
-    public void setAgencia(String agencia) {
+    
+    public void setAgencia(String agencia){
         this.agencia = agencia;
     }
 
+    public static int getTotalDeContas(){
+        
+        return Conta.indentificador;
+    }
+            
     public void sacar(double quantidade) {
         if (this.saldo < quantidade) {
 
@@ -68,8 +87,8 @@ public class Conta {
     void depositar(double quantidade) {
         if (quantidade < 0) {
             System.out.println("Valor negativo");
-        }else{
-        this.saldo += quantidade;
+        } else {
+            this.saldo += quantidade;
         }
     }
 
@@ -85,7 +104,11 @@ public class Conta {
     }
 
     public void abertura(String abertura) throws ParseException {
-        this.dataAbertura = formato.parse(abertura);
+        
+        if(dataValida(abertura)){
+        this.dataAbertura = formato.parse(abertura);  
+        }
+        System.out.println("Data invalida");
     }
 
     public String RecuperarDados() {
@@ -93,5 +116,14 @@ public class Conta {
                 + "\n Data de Abertura " + formato.format(dataAbertura) + "\n Rendimento da Conta " + this.calcularRendimento();
         return dados;
 
+    }
+    
+    public boolean dataValida(String dataIce){
+       try{
+        LocalDate.parse(dataIce);
+       }catch(DateTimeException e){
+           return false;
+       }
+       return true;
     }
 }

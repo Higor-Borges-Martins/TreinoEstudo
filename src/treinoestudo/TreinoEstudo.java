@@ -40,8 +40,10 @@ public class TreinoEstudo {
 //        System.out.println(y);
 //       y -=x;
 //        System.out.println(y);
-        Conta minhaConta;
-        minhaConta = new Conta();
+        Cliente c1 = new Cliente();
+        Conta minhaConta = new Conta(c1);
+        int total = Conta.getTotalDeContas();
+
 //        minhaConta.depositar(100);
 //        
 ////        minhaConta.titular = "Duki";
@@ -50,7 +52,6 @@ public class TreinoEstudo {
 //        
 //        minhaConta.sacar(50000);
 //        System.out.println(minhaConta.saldo);
-
 //        Conta meuSonho = new Conta();
 //        meuSonho.saldo = 150000;
 //        System.out.println("Meu sonho " + meuSonho.saldo);
@@ -67,7 +68,6 @@ public class TreinoEstudo {
 //        minhaConta.depositar(500);
 //        System.out.println(minhaConta.saldo);
 //        Conta minhaConta = new Conta();
-        Cliente c1 = new Cliente();
 //        minhaConta.titular.nome = "Duke";
 //        c1.depositar(100);
 //        c2.saldo = c1.saldo;
@@ -78,12 +78,11 @@ public class TreinoEstudo {
         c1.nome = "Duki";
         c1.sobreNome = "B";
         c1.validarCpf("123.456.-78");
-//        c2.saldo = 10;
-//        c2.titular = "Duki";
         System.out.println(c1.toString());
         minhaConta.setTitular(c1);
         c1.mudarCpf("123.456.90");
         System.out.println(c1.toString());
+        System.out.println(total);
 //        if(c1 == c2){
 //            System.out.println("são iguais");
 //        }else{
@@ -100,12 +99,14 @@ public class TreinoEstudo {
 //
 //
 //minhaConta.titular = "Hugo";
-minhaConta.setAgencia("45678-9");
-minhaConta.depositar(-50.0);
-minhaConta.depositar(30.0);
-minhaConta.abertura("01/02/200");
-minhaConta.RecuperarDados();
+        minhaConta.setAgencia("45678-9");
+        minhaConta.depositar(-50.0);
+        minhaConta.depositar(30.0);
+        minhaConta.abertura("01/02/2000");
+        minhaConta.RecuperarDados();
         System.out.println(minhaConta.RecuperarDados());
+        
+        
 //
 //data.dia = 04;
 //data.mes = 05;
