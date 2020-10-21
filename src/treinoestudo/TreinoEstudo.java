@@ -100,9 +100,9 @@ public class TreinoEstudo {
 //
 //minhaConta.titular = "Hugo";
         minhaConta.setAgencia("45678-9");
-        minhaConta.depositar(-50.0);
+        minhaConta.depositar(50.0);
         minhaConta.depositar(30.0);
-        minhaConta.abertura("01/02/2000");
+        minhaConta.abertura("31/02/2000");
         minhaConta.RecuperarDados();
         System.out.println(minhaConta.RecuperarDados());
         
