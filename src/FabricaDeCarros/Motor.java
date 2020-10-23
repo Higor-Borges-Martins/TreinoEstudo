@@ -13,5 +13,16 @@ public class Motor {
     int potencia;
     String tipo;
     
+    private static Motor modelo;
     
+    private Motor(){
+    }
+    
+    public static synchronized Motor getModelo(){
+        if(modelo == null){
+            modelo = new Motor();
+        }
+        return modelo;
+    } 
+   
 }
