@@ -16,12 +16,14 @@ public class Casa {
     Porta porta2;
     Porta porta3;
     
-    void pinta(String tinta){
+    //@param tinta String - define a cor da tinta
+  public  void pinta(String tinta){
         
         cor = tinta;
     }
     
-    int quantasPortasAberas(){
+    /**@return int*/
+    public int quantasPortasAberas(){
         int i = 0;
       if(porta1.aberta == "aberta"){
           i++;

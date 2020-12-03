@@ -17,6 +17,8 @@ public class TreinoEstudo {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws ParseException {
+        
+        /** com essa combinação podemos inserir<b>marcações</b> HTML em  <i>nossos</i> comentários.*/
         // TODO code application logic here
         //imprimir idade
         //        int idade = 15;

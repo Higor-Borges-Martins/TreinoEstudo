@@ -8,6 +8,7 @@ package treinoestudo;
 /**
  *
  * @author GEMEOS
+ * @version 2.0
  */
 public class Cliente {
 
