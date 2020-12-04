@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package treinoestudo;
+package br.com.treino.casa;
 
 import static java.lang.System.out;
 

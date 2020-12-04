@@ -5,6 +5,7 @@
  */
 package treinoestudo;
 
+import br.com.treino.casa.Porta;
 import java.text.ParseException;
 
 /**
@@ -148,31 +149,7 @@ public class TreinoEstudo {
 //System.out.println(p.nome + p.idade);
 //p.fazAniversario();
 //System.out.println(p.nome + p.idade);
-        Porta p = new Porta();
-
-        p.abre();
-        p.pinta("azul");
-        p.divencaox = 1;
-        p.divencaoy = 2;
-        p.divencaoz = 3;
-
-        if (p.estaAberta()) {
-
-            System.out.println("aberta");
-        } else {
-            System.out.println("fechada");
-        }
-
-        System.out.println(p.toString());
-
-        p.pinta("Verde");
-        p.fecha();
-        if (p.estaAberta()) {
-            System.out.println("aberta");
-        } else {
-            System.out.println("fechada");
-        }
-        System.out.println(p.toString());
+       
 
 //        Casa c;
 //        c= new Casa();
@@ -184,5 +161,17 @@ public class TreinoEstudo {
 //        c.pinta("azul-marino");
 //        
 //        System.out.println(c.cor + "Portas abertas" + c.quantasPortasAberas());
+    Gerente gerente = new Gerente();
+    
+    gerente.setNome("Pedro");
+    gerente.setSenha(123);
+    
+        System.out.println("O novo gerente é " + gerente.getNome());
+        gerente.setSalario(5000.00);
+        System.out.println(gerente.getBonificacao());
+        
+        Funcionario funcionario = new Funcionario();
+        funcionario = gerente;
+        System.out.println("Bonificação do funcionario" + funcionario.getBonificacao());
     }
 }
