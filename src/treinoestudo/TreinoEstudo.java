@@ -18,8 +18,11 @@ public class TreinoEstudo {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws ParseException {
-        
-        /** com essa combinação podemos inserir<b>marcações</b> HTML em  <i>nossos</i> comentários.*/
+
+        /**
+         * com essa combinação podemos inserir<b>marcações</b> HTML em
+         * <i>nossos</i> comentários.
+         */
         // TODO code application logic here
         //imprimir idade
         //        int idade = 15;
@@ -27,7 +30,6 @@ public class TreinoEstudo {
         //        //imprimir dade ano que vem
         //        int idadeAnoQueVem = idade + 1;
         //        System.out.println(idadeAnoQueVem);
-
         //        int idade = 15;
         //        boolean amigoDoDono = false;
         //        if(idade >18 && !amigoDoDono){
@@ -43,9 +45,9 @@ public class TreinoEstudo {
 //        System.out.println(y);
 //       y -=x;
 //        System.out.println(y);
-        Cliente c1 = new Cliente();
-        Conta minhaConta = new Conta(c1);
-        int total = Conta.getTotalDeContas();
+//        Cliente c1 = new Cliente();
+//        Conta minhaConta = new Conta(c1);
+//        int total = Conta.getTotalDeContas();
 
 //        minhaConta.depositar(100);
 //        
@@ -77,16 +79,16 @@ public class TreinoEstudo {
 //        c2.depositar(200);
 //        System.out.println(c1.saldo);
 //        System.out.println(c2.saldo);
-        c1.idade = 10;
-        c1.nome = "Duki";
-        c1.sobreNome = "B";
-        c1.validarCpf("123.456.-78");
-        System.out.println(c1.toString());
-        minhaConta.setTitular(c1);
-        c1.mudarCpf("123.456.90");
-        System.out.println(c1.toString());
-        System.out.println(total);
-//        if(c1 == c2){
+//        c1.idade = 10;
+//        c1.nome = "Duki";
+//        c1.sobreNome = "B";
+//        c1.validarCpf("123.456.-78");
+//        System.out.println(c1.toString());
+//        minhaConta.setTitular(c1);
+//        c1.mudarCpf("123.456.90");
+//        System.out.println(c1.toString());
+//        System.out.println(total);
+////        if(c1 == c2){
 //            System.out.println("são iguais");
 //        }else{
 //            System.out.println("Não");
@@ -102,14 +104,13 @@ public class TreinoEstudo {
 //
 //
 //minhaConta.titular = "Hugo";
-        minhaConta.setAgencia("45678-9");
-        minhaConta.depositar(50.0);
-        minhaConta.depositar(30.0);
-        minhaConta.abertura("31/02/2000");
-        minhaConta.RecuperarDados();
-        System.out.println(minhaConta.RecuperarDados());
-        
-        
+//        minhaConta.setAgencia("45678-9");
+//        minhaConta.depositar(50.0);
+//        minhaConta.depositar(30.0);
+//        minhaConta.abertura("31/02/2000");
+//        minhaConta.RecuperarDados();
+//        System.out.println(minhaConta.RecuperarDados());
+
 //
 //data.dia = 04;
 //data.mes = 05;
@@ -149,8 +150,6 @@ public class TreinoEstudo {
 //System.out.println(p.nome + p.idade);
 //p.fazAniversario();
 //System.out.println(p.nome + p.idade);
-       
-
 //        Casa c;
 //        c= new Casa();
 //        p.abre();
@@ -161,17 +160,28 @@ public class TreinoEstudo {
 //        c.pinta("azul-marino");
 //        
 //        System.out.println(c.cor + "Portas abertas" + c.quantasPortasAberas());
-    Gerente gerente = new Gerente();
-    
-    gerente.setNome("Pedro");
-    gerente.setSenha(123);
-    
-        System.out.println("O novo gerente é " + gerente.getNome());
-        gerente.setSalario(5000.00);
-        System.out.println(gerente.getBonificacao());
+//    Gerente gerente = new Gerente();
+//    
+//    gerente.setNome("Pedro");
+//    gerente.setSenha(123);
+//    
+//        System.out.println("O novo gerente é " + gerente.getNome());
+//        gerente.setSalario(5000.00);
+//        System.out.println(gerente.getBonificacao());
+//        
+//        Funcionario funcionario = new Funcionario();
+//        funcionario = gerente;
+//        System.out.println("Bonificação do funcionario" + funcionario.getBonificacao());
+        ControleDeBonificacoes controle = new ControleDeBonificacoes();
         
-        Funcionario funcionario = new Funcionario();
-        funcionario = gerente;
-        System.out.println("Bonificação do funcionario" + funcionario.getBonificacao());
+        Gerente funcionario1 = new Gerente();
+        funcionario1.setSalario(100.00);
+        controle.registro(funcionario1);
+        
+        Funcionario funcionario2 = new Funcionario();
+        funcionario2.setSalario(500.00);
+        controle.registro(funcionario2);
+        
+        System.out.println(controle.getTotalDeBonificacoes());
     }
 }
