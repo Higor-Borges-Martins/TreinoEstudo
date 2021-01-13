@@ -14,6 +14,7 @@ public class ControleDeBonificacoes {
     private double totalDeBonificacoes = 0;
     
     public void registro(Funcionario funcionario){
+        System.out.println("Adicionando Bonificação do funcionario " + funcionario.getNome());
         this.totalDeBonificacoes += funcionario.getBonificacao();
     }
     

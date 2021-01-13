@@ -7,7 +7,6 @@ package treinoestudo;
 
 import br.com.treino.casa.Porta;
 import java.text.ParseException;
-
 /**
  *
  * @author GEMEOS
@@ -175,6 +174,7 @@ public class TreinoEstudo {
         ControleDeBonificacoes controle = new ControleDeBonificacoes();
         
         Gerente funcionario1 = new Gerente();
+        funcionario1.setNome("Pedro");
         funcionario1.setSalario(100.00);
         controle.registro(funcionario1);
         
@@ -183,5 +183,6 @@ public class TreinoEstudo {
         controle.registro(funcionario2);
         
         System.out.println(controle.getTotalDeBonificacoes());
+        
     }
 }
