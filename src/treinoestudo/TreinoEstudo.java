@@ -181,5 +181,7 @@ public class TreinoEstudo {
         
         System.out.println(controle.getTotalDeBonificacoes());
         
+        Diretor diretor = new Diretor();
+        diretor.getBonificacao();
     }
 }
