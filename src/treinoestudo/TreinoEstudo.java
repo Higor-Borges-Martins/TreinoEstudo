@@ -178,9 +178,6 @@ public class TreinoEstudo {
         funcionario1.setSalario(100.00);
         controle.registro(funcionario1);
         
-        Funcionario funcionario2 = new Funcionario();
-        funcionario2.setSalario(500.00);
-        controle.registro(funcionario2);
         
         System.out.println(controle.getTotalDeBonificacoes());
         

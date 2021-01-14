@@ -39,9 +39,6 @@ public abstract class Funcionario {
         this.salario = salario;
     }
     
-    public double getBonificacao(){
-        return this.salario * 0.10;
-       
-    }
+    public abstract double getBonificacao();
 
 }
